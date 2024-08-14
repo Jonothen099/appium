@@ -12,8 +12,8 @@ jobs:
         - name: Install
           run: npm install
         - name: Test
-          env: BROWSERSTACK_USERNAME : ${{secrets.BS_USER}}, 
-               BROWSERSTACK_ACCESS_KEY : ${{secrets.BS_KEY}}
+          env: BROWSERSTACK_USERNAME: ${{ secrets.BS_USER }}
+               BROWSERSTACK_ACCESS_KEY: ${{secrets.BS_KEY }}
           run: npx wdio config/wdio.android.stack.conf.js --spec test/specs/androidTest/basicTest.js
         - uses: actions/upload-artifact@v1
           if: failure()
