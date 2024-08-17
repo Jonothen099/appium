@@ -51,6 +51,7 @@ describe('Find Elements Tests', () => {
     // find element using UiAutomator Android
     it('Find elements by UIAutomator', async () => {
         await $('android=new UiSelector().textContains("Start Alarm Service")').click()
+        // await driver.pause(2000)
 
         // when working with toast use this finding method Toast[1] for first toast it finds 
         const toastMess = await (await $('//android.widget.Toast[1]')).isExisting()
