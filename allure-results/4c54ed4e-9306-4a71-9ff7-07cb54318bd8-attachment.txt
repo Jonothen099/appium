@@ -1,0 +1,4 @@
+{
+  "script": "browserstack_executor: {\"action\":\"annotate\",\"arguments\":{\"data\":\"Test: Find elements by UIAutomator and Verify Toast Message\",\"level\":\"info\"}}",
+  "args": []
+}

@@ -7,20 +7,6 @@ config.specs = [
 
 ]
 
-config.capabilities = [
-    // android Caps
-    {
-        // capabilities for local Appium web tests on an Android Emulator
-        platformName: 'Android',
-        'appium:deviceName': 'Pixel8Pro',
-        'appium:platformVersion': '15.0',
-        'appium:automationName': 'UiAutomator2', 
-        'appium:orientation': 'PORTRAIT',
-        'appium:app': '/Users/jono/Desktop/AutomationTesting/MyAppiumProject/app/android/ApiDemos-debug.apk',
-        'appium:newCommandTimeout': 240
-    }
-]
-
 config.services = [
     [
         'appium',
@@ -34,6 +20,20 @@ config.services = [
             command: 'appium',
         },
     ],
+]
+
+config.capabilities = [
+    // android Caps
+    {
+        // capabilities for local Appium web tests on an Android Emulator
+        platformName: 'Android',
+        'appium:deviceName': 'Pixel8Pro',
+        'appium:platformVersion': '15.0',
+        'appium:automationName': 'UiAutomator2', 
+        'appium:orientation': 'PORTRAIT',
+        'appium:app': '/Users/jono/Desktop/AutomationTesting/MyAppiumProject/app/android/ApiDemos-debug.apk',
+        'appium:newCommandTimeout': 240
+    }
 ]
 
 export { config as config }

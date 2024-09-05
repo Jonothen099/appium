@@ -1,0 +1,29 @@
+import {bsKey , bsUser} from '../env.config.js'
+
+userName: jon_yw4q7I
+accessKey: xhj31uhumoa7RDvDTod4
+
+app_settings:
+  app: bs://171147c135a7f4e4fc3287c7480eb7339e933e42
+  test_suite: "test/specs/androidTest/basicTest.js"
+
+platforms:
+  - platformName: android
+    deviceName: Samsung Galaxy S22 Ultra
+    platformVersion: 12.0
+  - platformName: android
+    deviceName: Google Pixel 7 Pro
+    platformVersion: 13.0
+  - platformName: android
+    deviceName: OnePlus 9
+    platformVersion: 11.0
+parallelsPerPlatform: 1
+browserstackLocal: true
+buildName: bstack-demo
+projectName: BrowserStack Sample
+buildIdentifier: ${BUILD_NUMBER}
+acceptInsecureCerts: true
+debug: true
+networkLogs: true
+percy: false
+percyCaptureMode: auto

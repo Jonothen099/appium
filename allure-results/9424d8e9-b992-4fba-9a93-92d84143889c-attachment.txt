@@ -1,0 +1,4 @@
+{
+  "script": "browserstack_executor: {\"action\":\"annotate\",\"arguments\":{\"data\":\"Test: Find element by acc id\",\"level\":\"info\"}}",
+  "args": []
+}

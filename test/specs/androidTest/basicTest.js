@@ -44,17 +44,36 @@ describe('Find Elements Tests', () => {
         const service = await $('~Alarm Service')
         await service.click()
         const startAlarm = await $('//android.widget.Button[@content-desc="Start Alarm Service"]')
+        // since dif version of android display the text diffly, then this is how to handle the text case
+        const platformVersion = await driver.capabilities.platformVersion
+        if(platformVersion.startsWith('14')){
+            await expect(startAlarm).toHaveText("Start Alarm Service")
+        }else if(platformVersion.startsWith('13')){
+            await expect(startAlarm).toHaveText("START ALARM SERVICE")
 
-        await expect(startAlarm).toHaveText("Start Alarm Service")
+        }
+
         
     })
     // find element using UiAutomator Android
-    it('Find elements by UIAutomator', async () => {
+    it('Find elements by UIAutomator and Verify Toast Message', async () => {
+
         await $('android=new UiSelector().textContains("Start Alarm Service")').click()
-        // await driver.pause(2000)
+        console.log("clicked to trigger toast message")
+
+        let toastMess = false
+        for (let index = 0; index < 5; index++) {
+            try {
+                toastMess = await (await $('//android.widget.Toast[1]')).isExisting()
+                if(toastMess) break
+            } catch (error) {
+                await driver.pause(500)
+            }
+            
+        }
 
         // when working with toast use this finding method Toast[1] for first toast it finds 
-        const toastMess = await (await $('//android.widget.Toast[1]')).isExisting()
+        
         
     
         await expect(toastMess).toBe(true)
