@@ -1,6 +1,7 @@
 import { config } from './wdio.shared.conf.js'
 import {bsKey , bsUser} from '../env.config.js'
 import uploadAppToBrowserStack from '../app/upload.apps.js'; // Import the upload function
+import path from 'path'
 
 
 // config.user = "jono_MUi5pc"
@@ -36,7 +37,8 @@ config.services = [
       {
         buildIdentifier: "Build",
         browserstackLocal: true, 
-        app: "/Users/jono/Desktop/AutomationTesting/MyAppiumProject/app/android/ApiDemos-debug.apk"
+        // app: "/Users/jono/Desktop/AutomationTesting/MyAppiumProject/app/android/ApiDemos-debug.apk"
+        app: "bs://171147c135a7f4e4fc3287c7480eb7339e933e42"
       },
     ]
   ]
