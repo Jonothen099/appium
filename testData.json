@@ -2,7 +2,7 @@
   "users": [
     {
       "id": "U10011",
-      "username": "test_user_1",
+      "username": "user name updated via api",
       "phone": "+61411111111",
       "plan": "Prepaid_20GB",
       "status": "active",
