@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "id": "U1001",
+      "username": "test_user_1",
+      "phone": "+61411111111",
+      "plan": "Prepaid_20GB",
+      "status": "active",
+      "delegates": []
+    },
+    {
+      "id": "U1002",
+      "username": "test_user_2",
+      "phone": "+61412222222",
+      "plan": "Postpaid_50GB",
+      "status": "active",
+      "delegates": ["U1001"]
+    },
+    {
+      "id": "U1003",
+      "username": "test_user_3",
+      "phone": "+61413333333",
+      "plan": "Prepaid_5GB",
+      "status": "inactive",
+      "delegates": []
+    },
+    {
+      "id": "U1004",
+      "username": "test_user_4",
+      "phone": "+61414444444",
+      "plan": "Postpaid_100GB",
+      "status": "active",
+      "delegates": []
+    }
+  ]
+}
